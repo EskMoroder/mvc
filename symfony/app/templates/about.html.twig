@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <h1>About</h1>
+    
+    <h2>
+    <p>Kursen syfter till att lära ut principerna för Model-View-Controller-arkitekturmönstret.</p>
+        <p><a href="https://github.com/dbwebb-se/mvc">Dbwebb kursrepo</a></p>
+        <p><a href="https://github.com/EskMoroder/mvc">Mitt kursrepo</a></p>
+    </h2>
+
+    <div class="col-sm-6">
+      <h2>Bild</h2>
+      <p>Här är en representativ bild:</p>
+      <a href="{{ asset('img/mvc.png') }}">
+        <img src="{{ asset('img/mvc.png') }}" alt="" width="600">
+      </a>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+

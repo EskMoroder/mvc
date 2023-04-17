@@ -1,0 +1,58 @@
+body {
+    background-color: lightgray;
+    margin: 0 auto;
+    max-width: 800px;
+    max-height: 140px;
+}
+
+header {
+    min-height: 140px;
+}
+
+h1 {
+    border-bottom: 4px double #ccc;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 36px;
+}
+
+body {
+    background-color: #efefef;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+body.leprechaun-theme {
+    background-color: #c2d6b3;
+    color: #3a3a3a;
+}
+
+.h1e {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.magic-number {
+    font-size: 2em;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.images img {
+    max-height: 100%;
+    margin: 0;
+    padding: 1em;
+    box-sizing: border-box;
+}

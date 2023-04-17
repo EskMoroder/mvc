@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    
+    <header class="site-header" style="background-image: url({{ asset('img/background.jpg') }}); background-size: 100% 1000px;">
+    <span class = "site-title">My Symfony Site</span>
+    </header>
+    </head>
+
+
+    <body>
+    <nav>
+        <ul>
+            <li><a href="{{ path('home') }}">Home</a></li>
+            <li><a href="{{ path('about') }}">About</a></li>
+            <li><a href="{{ path('lucky_number') }}">Lucky number</a></li>
+            <li><a href="{{ path('report') }}">Report</a></li>
+        </ul>
+    </nav>
+
+    {% if app.request.attributes.get('_route') == 'home' %}
+        <h1>Om mig</h1>
+
+    <div>
+        <h2>About me</h2>
+        <p>Jag är en aspirerande programmerare som alltid ser fram emot att lära mig nya saker.</p>
+        <p>På fritiden gillar jag friluftslivet, sport i alla former men främst fotboll och handboll.</p>
+        <p>Filmer och serier uppskattas väldigt mycket och en skräckfilm kan aldrig gå fel!</p>
+    </div>
+    <div>
+        <h2>Min avatar</h2>
+        <p>Här kommer en bild på min avatar</p>
+        <img src="{{ asset('img/flowey.png') }}" alt="Min avatar">
+    </div>
+    {% endif %}
+
+        {% block body %}{% endblock %}
+
+
+    </body>
+</html>
+
